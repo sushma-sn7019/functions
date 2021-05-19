@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>functions</title>
+	<style>
+		 h4{
+			color: green;
+		}
+	</style>
+</head>
+<body>
+<script>
+/*function with parameters*/
+function chiefminister(chief_minister,stateName){
+	switch(stateName){
+		case 'KA':document.write('<h4>Chief minister of Karnataka '+ chief_minister+'</h4>');
+		break;
+		case 'MP':document.write('<h4>Chief minister of Madhya Pradesh '+ chief_minister+'</h4>');
+		break;
+		case 'TN':document.write('<h4>Chief minister of Tamil Nadu '+chief_minister+'</h4>');
+		break;
+		case 'UP':document.write('<h4>Chief minister of Uttar Pradesh '+chief_minister+'</h4>');
+		break;
+		case 'KL':document.write('<h4>Chief minister of Kerala '+chief_minister+'</h4>');
+		break;
+		case 'AP':document.write('<h4>Chief minister of Andhra Pradesh '+chief_minister+'</h4>');
+		break;
+		case 'MH':document.write('<h4>Chief minister of Maharastra '+chief_minister+'</h4>');
+		break;
+		default:document.write('<h4>Prime minister of India '+chief_minister+'</h4>');
+		break;
+	}
+}
+chiefminister('shri B.S.Yediyurappa','KA');
+chiefminister('shri Shivaraj Singh Chouhan','MP');
+chiefminister('shri M.K.Stalin','TN');
+chiefminister('shri Yogi Aditya Nath','UP');
+chiefminister('shri Pinarayi Vijayan','KL');
+chiefminister('shri YS Jagan Mohan Reddy','AP');
+chiefminister('shri YS Jagan Mohan Reddy','MH');
+chiefminister('shri Narendra modi');
+
+
+
+//variable with anonymous function and without parameter
+var percentage=function(){
+	return (488 / 600 )* 100;
+}
+document.write(percentage());
+
+//or with parameters
+
+percentage=function(x,y){
+     return (x / y )* 100;
+}
+console.log(percentage(488 / 600));
+
+//function with default parameters and return statement
+
+function calculate_discount(amount,discount=5){
+return amount-(amount*discount/100);
+}
+console.log(calculate_discount(3350));
+console.log(calculate_discount(3350,8));
+</script>
+</body>
+</html>
