@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>functions methods</title>
+</head>
+<body>
+<script>
+//factorial using recursive function method
+function factorial(num){
+    if(num == 0 || num == 1){
+        return 1;
+    }else{
+        return num * factorial(num-1);
+    }
+}
+let num = 7;
+let result = factorial(num);
+document.write('<h3> The factorial of the number ' + num + ' is ' + result +'</h3>');
+
+//factorial without using recursive  function method
+function factorial(n){
+  let num = 1;
+  if (n == 0 || n == 1){
+    return num;
+  }else{
+    for(let i = n; i >= 1; i--){
+      num = num * i;
+    }
+    return num;
+  }  
+}
+let n = 0;
+num = factorial(n)
+console.log("The factorial of " + n + " is " + num);
+</script>
+</body>
+</html>
